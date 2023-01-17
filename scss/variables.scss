@@ -1,0 +1,43 @@
+@font-face {
+	font-family: regular;
+	src: url(../public/fonts/OpenSans_SemiCondensed-Regular.ttf);
+}
+
+@font-face {
+	font-family: medium;
+	src: url(../public/fonts/OpenSans_SemiCondensed-Medium.ttf);
+}
+
+@font-face {
+	font-family: semiBold;
+	src: url(../public/fonts/OpenSans-SemiBold.ttf);
+}
+
+
+
+
+//bg-color
+$primary-bg: #0c7598;
+
+
+//color
+$primary-color: aliceblue;
+$secondary-color: rgb(0, 0, 0);
+
+//font-size
+$size-xl: 2rem;
+$size-l: 1.5rem;
+$size-m: 1rem;
+$size-s: .8rem;
+
+//margin
+$margin-xl: 3rem;
+$margin-l: 2rem;
+$margin-m: 1rem;
+$margin-s: .8rem;
+
+//padding
+$padding-xl: 3rem;
+$padding-l: 2rem;
+$padding-m: 1rem;
+$padding-s: .8rem;
