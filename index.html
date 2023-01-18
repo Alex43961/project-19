@@ -18,10 +18,13 @@
 				<img src="./public/icons/logo-ga3518c07c_640.png" alt="Something wrong" class="logo">
 			</div>
 			<nav class="nav-header">
-				<a class="item-nam" href="#">Home</a>
-				<a class="item-nam" href="#">Actions</a>
-				<a class="item-nam" href="#">About us</a>
-				<a class="item-nam" href="#">Login</a>
+				<ul class="items-nav">
+					<li class="item-nav"><a href="#">Home</a></li>
+					<li class="item-nav"><a href="#">Actions</a></li>
+					<li class="item-nav"><a href="#">About us</a></li>
+					<li class="item-nav"><a href="#">Login</a></li>
+				</ul>
+
 			</nav>
 			<div class="input-wrapper">
 				<input class="input-header" type="search" name="search" value="Search">
@@ -31,7 +34,85 @@
 		<div class="container">
 			<aside class="sidebar">
 
+				<p class="title-form">Price $</p>
+				<form class="form-slider" onsubmit="return false" oninput="level.value = flevel.valueAsNumber">
+					<input name="flevel" type="range" min="1000" max="100000" value="100000" step="1000" class="slider"
+						id="myRange">
+					<output for="myRange" name="level" id="output">100000</output>
+				</form>
+
+
+				<form action="post" class="form__sidebar">
+					<select name="brand" id="brand" class="brand-form">
+						<option>Select brand</option>
+						<option value="BMW">BMW</option>
+						<option value="Opel">Opel</option>
+						<option value="Volkswagen">Volkswagen</option>
+						<option value="Audi">Audi</option>
+						<option value="Skoda">Skoda</option>
+						<option value="Renault">Renault</option>
+					</select>
+					<p class="title-form">Select color</p>
+					<p class="input-sidebar">
+						<input type="radio" name="color" class="color" id="red">
+						<label for="color">red</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="radio" name="color" class="color" id="orange">
+						<label for="color">orange</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="radio" name="color" class="color" id="yellow">
+						<label for="color">yellow</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="radio" name="color" class="color" id="green">
+						<label for="color">green</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="radio" name="color" class="color" id="blue">
+						<label for="color">blue</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="radio" name="color" class="color" id="darkblue">
+						<label for="color">darkblue</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="radio" name="color" class="color" id="purple">
+						<label for="color">purple</label>
+					</p>
+					<p class="title-form">Select age</p>
+					<p class="input-sidebar">
+						<input type="checkbox" name="age" class="age" id="new">
+						<label for="color">new</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="checkbox" name="age" class="age" id="five">
+						<label for="color"> up to 5 years</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="checkbox" name="age" class="age" id="ten">
+						<label for="color">5-10 years</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="checkbox" name="age" class="age" id="fifteen">
+						<label for="color">11-15 years</label>
+					</p>
+					<p class="input-sidebar">
+						<input type="checkbox" name="age" class="age" id="twenty">
+						<label for="color">16-20 years</label>
+					</p>
+					<div class="button-wrapper">
+						<p><input type="submit" class="submit-btn"></p>
+						<p><input type="reset" class="submit-btn"></p>
+					</div>
+
+				</form>
 			</aside>
+
+			<main class="main">
+
+			</main>
 		</div>
 	</div>
 	<script type="module" src="/main.js"></script>

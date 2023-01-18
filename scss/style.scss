@@ -36,14 +36,18 @@ button {
 	}
 
 	.nav-header {
-		@include flex(space-around, center);
-		width: 700px;
 
-		.item-nam {
-			font-size: $size-l;
-			color: $primary-color;
-			font-family: semiBold;
+		.items-nav {
+			@include flex(space-around, center);
+			width: 700px;
+
+			.item-nav {
+				font-size: $size-l;
+				color: $primary-color;
+				font-family: semiBold;
+			}
 		}
+
 	}
 
 	.input-wrapper {
@@ -63,13 +67,130 @@ button {
 			font-size: $size-m;
 			font-family: regular;
 			border: 2px solid #ac31bc;
-			background-color: #ac31bc;
+			background-color: inherit;
+			border-radius: 3px;
 			transition-duration: .3s;
 
 			&:hover {
-				background-color: inherit;
 				color: #000;
+				background-color: #ac31bc;
 			}
 		}
 	}
+}
+
+.container {
+
+	//@include flex(space-around, center)
+	.sidebar {
+		width: 25%;
+		@include flex(center, center);
+		flex-direction: column;
+		padding-top: $padding-l;
+
+		.title-form {
+			font-family: regular;
+			font-size: $size-m;
+			color: #000;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: $margin-l
+		}
+
+		.form-slider {
+			@include flex(space-around, center);
+
+			.slider {
+				appearance: none;
+				width: 200px;
+				height: 10px;
+				background: #2dd0ed;
+				outline: none;
+				opacity: .8;
+				transition-duration: .3s;
+
+				&-.slider:hover {
+					opacity: 1;
+				}
+			}
+
+			output {
+				margin-left: $margin-m;
+				vertical-align: bottom;
+			}
+		}
+
+
+		.slider::-webkit-slider-thumb {
+			appearance: none;
+			width: 15px;
+			height: 20px;
+			background: #721fdd;
+			cursor: pointer;
+		}
+
+		.form__sidebar {
+			margin-top: $margin-xl;
+
+			.brand-form {
+				width: 150px;
+				height: 24px;
+				font-family: regular;
+				font-size: $size-m;
+				color: #000;
+
+				option {
+					font-family: regular;
+					font-size: $size-m;
+					color: #000;
+				}
+			}
+
+			.title-form {
+				font-family: regular;
+				font-size: $size-m;
+				color: #000;
+				font-weight: bold;
+				margin-top: $margin-xl;
+			}
+		}
+
+		.button-wrapper {
+			@include flex(space-between, center);
+			margin-top: $margin-xl;
+			width: 200px;
+
+			.submit-btn {
+				width: 80px;
+				color: #2dd0ed;
+				font-size: $size-m;
+				font-family: regular;
+				border: 2px solid #ac31bc;
+				background-color: inherit;
+				border-radius: 3px;
+				transition-duration: .3s;
+
+				&:hover {
+					color: #000;
+					background-color: #ac31bc;
+				}
+			}
+		}
+
+
+	}
+
+
+
+	.title-form {}
+
+	.input-sidebar {}
+
+	.color {}
+
+	.age {}
+
+	.submit-btn {}
+
+	.main {}
 }
