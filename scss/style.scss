@@ -23,178 +23,66 @@ button {
 	cursor: pointer;
 }
 
-.header {
-	background-color: $primary-bg;
-	height: 80px;
-	@include flex(space-around, center);
+html,
+body {
+	height: 100%;
 
-	.logo-wrapper {
-		.logo {
-			border-radius: 50%;
-			width: 60px;
-		}
-	}
-
-	.nav-header {
-
-		.items-nav {
-			@include flex(space-around, center);
-			width: 700px;
-
-			.item-nav {
-				font-size: $size-l;
-				color: $primary-color;
-				font-family: semiBold;
-			}
-		}
-
-	}
-
-	.input-wrapper {
-		input {
-			background-color: inherit;
-			border: none;
-			outline-style: none;
-			border-bottom: 2px solid $primary-color;
-			color: $primary-color;
-			font-size: $size-m;
-			font-family: regular;
-		}
-
-		button {
-			width: 60px;
-			color: #2dd0ed;
-			font-size: $size-m;
-			font-family: regular;
-			border: 2px solid #ac31bc;
-			background-color: inherit;
-			border-radius: 3px;
-			transition-duration: .3s;
-
-			&:hover {
-				color: #000;
-				background-color: #ac31bc;
-			}
-		}
-	}
-}
-
-.container {
-
-	@include flex(center, start);
-
-	.sidebar {
-		width: 25%;
-		@include flex(center, center);
+	#app {
+		min-height: 100%;
+		display: flex;
 		flex-direction: column;
-		padding-top: $padding-l;
-		background-color: rgb(223, 236, 247);
 
-		.title-form {
-			font-family: regular;
-			font-size: $size-m;
-			color: #000;
-			font-weight: bold;
-			text-align: center;
-			margin-bottom: $margin-l
-		}
 
-		.form-slider {
+		.header {
+			background-color: $primary-bg;
+			height: 80px;
 			@include flex(space-around, center);
 
-			.slider {
-				appearance: none;
-				width: 80%;
-				height: 10px;
-				background: #2dd0ed;
-				outline: none;
-				opacity: .8;
-				transition-duration: .3s;
-
-				&-.slider:hover {
-					opacity: 1;
+			.logo-wrapper {
+				.logo {
+					border-radius: 50%;
+					width: 60px;
 				}
 			}
 
-			output {
-				margin-left: $margin-m;
-				vertical-align: bottom;
+			.nav-header {
+
+				.items-nav {
+					@include flex(space-around, center);
+					width: 700px;
+
+					.item-nav {
+						font-size: $size-l;
+						color: $primary-color;
+						font-family: semiBold;
+						transition-duration: .3s;
+					}
+
+					.item-nav:hover {
+						color: #000;
+					}
+				}
 			}
-		}
 
-
-		.slider::-webkit-slider-thumb {
-			appearance: none;
-			width: 15px;
-			height: 20px;
-			background: #721fdd;
-			cursor: pointer;
-		}
-
-		.form__sidebar {
-			margin-top: $margin-xl;
-
-			.brand-form {
-				width: 150px;
-				height: 24px;
-				font-family: regular;
-				font-size: $size-m;
-				color: #000;
-
-				option {
-					font-family: regular;
+			.input-wrapper {
+				input {
+					background-color: inherit;
+					border: none;
+					outline-style: none;
+					border-bottom: 2px solid $primary-color;
+					color: $primary-color;
 					font-size: $size-m;
-					color: #000;
+					font-family: regular;
 				}
-			}
 
-			.title-form {
-				font-family: regular;
-				font-size: $size-m;
-				color: #000;
-				font-weight: bold;
-				margin-top: $margin-xl;
-			}
-		}
-
-		.button-wrapper {
-			@include flex(space-between, center);
-			margin-top: $margin-xl;
-			width: 200px;
-
-			.submit-btn {
-				width: 80px;
-				color: #2dd0ed;
-				font-size: $size-m;
-				font-family: regular;
-				border: 2px solid #ac31bc;
-				background-color: inherit;
-				border-radius: 3px;
-				transition-duration: .3s;
-
-				&:hover {
-					color: #000;
-					background-color: #ac31bc;
+				::-webkit-input-placeholder {
+					color: $primary-color;
+					font-size: $size-m;
+					font-family: regular;
 				}
-			}
-		}
-	}
 
-	.main {
-		width: 75%;
-		background-color: antiquewhite;
-		padding: $padding-l;
-
-		.items__main {
-			@include grid(auto auto, auto auto);
-			justify-content: center;
-			align-items: center;
-			gap: 30px;
-
-			.item-main {
-				.item-btn {
-					margin-top: $margin-m;
-					width: 80px;
+				button {
+					width: 60px;
 					color: #2dd0ed;
 					font-size: $size-m;
 					font-family: regular;
@@ -208,37 +96,202 @@ button {
 						background-color: #ac31bc;
 					}
 				}
+			}
+		}
 
-				.text-wrapper {
-					@include grid(40% 40%, 30px 30px);
-					justify-content: start;
-					align-items: center;
+		.container {
+			height: 100%;
+			background-color: antiquewhite;
+			flex: 1 1 auto;
+			@include flex(space-between, start);
 
-					.text-item {
-						font-size: $size-m;
-						font-family: semiBold;
+			.sidebar {
+				width: 25%;
+				min-height: 100%;
+				@include flex(start, center);
+				flex-direction: column;
+				padding-top: $padding-l;
+
+
+				.title-form {
+					font-family: regular;
+					font-size: $size-m;
+					color: #000;
+					font-weight: bold;
+					text-align: center;
+					margin-bottom: $margin-l
+				}
+
+				.form-slider {
+					@include flex(space-around, center);
+
+					.slider {
+						appearance: none;
+						width: 80%;
+						height: 10px;
+						background: #2dd0ed;
+						outline: none;
+						opacity: .8;
+						transition-duration: .3s;
+
+						&-.slider:hover {
+							opacity: 1;
+						}
+					}
+
+					output {
+						margin-left: $margin-m;
+						vertical-align: bottom;
 					}
 				}
 
-				.image-main {
-					width: 500px;
-					height: 400px;
-					position: relative;
-					padding: 0 0 85% 0;
 
-					img {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						object-fit: inherit;
+				.slider::-webkit-slider-thumb {
+					appearance: none;
+					width: 15px;
+					height: 20px;
+					background: #721fdd;
+					cursor: pointer;
+				}
+
+				.form__sidebar {
+					margin-top: $margin-xl;
+
+					.brand-form {
+						width: 150px;
+						height: 24px;
+						font-family: regular;
+						font-size: $size-m;
+						color: #000;
+
+						option {
+							font-family: regular;
+							font-size: $size-m;
+							color: #000;
+						}
 					}
 
-					img:hover {
-						transform: perspective(1.05);
-						transform: scale(1.05);
-						transition: 300ms ease;
+					.title-form {
+						font-family: regular;
+						font-size: $size-m;
+						color: #000;
+						font-weight: bold;
+						margin-top: $margin-xl;
+					}
+				}
+
+				.button-wrapper {
+					@include flex(space-between, center);
+					margin-top: $margin-xl;
+					width: 200px;
+
+					.submit-btn {
+						width: 80px;
+						color: #2dd0ed;
+						font-size: $size-m;
+						font-family: regular;
+						border: 2px solid #ac31bc;
+						background-color: inherit;
+						border-radius: 3px;
+						transition-duration: .3s;
+
+						&:hover {
+							color: #000;
+							background-color: #ac31bc;
+						}
+					}
+				}
+			}
+
+			.main {
+				width: 75%;
+				padding: $padding-l;
+
+				.items__main {
+					@include grid(auto auto, auto auto);
+					justify-content: space-between;
+					align-items: center;
+					gap: 30px;
+
+					.item-main {
+						.item-btn {
+							margin-top: $margin-m;
+							width: 80px;
+							color: #2dd0ed;
+							font-size: $size-m;
+							font-family: regular;
+							border: 2px solid #ac31bc;
+							background-color: inherit;
+							border-radius: 3px;
+							transition-duration: .3s;
+
+							&:hover {
+								color: #000;
+								background-color: #ac31bc;
+							}
+						}
+
+						.text-wrapper {
+							@include grid(40% 40%, 30px 30px);
+							justify-content: start;
+							align-items: center;
+							margin-top: $margin-m;
+
+							.text-item {
+								font-size: $size-m;
+								font-family: semiBold;
+							}
+						}
+
+						.image-main {
+							width: 500px;
+							height: 400px;
+
+							position: relative;
+							padding: 0 0 85% 0;
+
+							img {
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								max-width: 100%;
+							}
+
+							img:hover {
+								transform: perspective(1.02);
+								transform: scale(1.02);
+								transition: 300ms ease;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.footer {
+			height: 80px;
+			background-color: $primary-bg;
+			@include flex(space-between, center);
+			padding: 0 $padding-l;
+
+			.nav__footer {
+				width: 50%;
+
+				.links__footer {
+					@include flex(space-between, center);
+
+					.text-link {
+						font-size: $size-m;
+						color: $primary-color;
+						font-family: semiBold;
+						transition-duration: .3s;
+					}
+
+					.text-link:hover {
+						color: #000;
 					}
 				}
 			}
